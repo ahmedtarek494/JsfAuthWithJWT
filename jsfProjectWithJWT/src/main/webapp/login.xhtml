@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<HTML xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+>
+<h:head>
+    <title>JSF Authentication</title>
+    <style type="text/css">
+        .textPlacement {
+            margin: 12px;
+        }
+    </style>
+</h:head>
+<h:body>
+    <h2>JSF Authentication with JWT POC</h2>
+    <h:form id="loginForm">
+        <div id="userNameDiv" class="textPlacement">
+            <h:outputLabel value="Username: " />
+            <h:inputText value="#{loginBean.userName}" />
+        </div>
+        <div id="passwordDiv" class="textPlacement">
+            <h:outputLabel value="Password: " />
+            <h:inputSecret value="#{loginBean.password}" />
+        </div>
+        <div id="submitBtn" class="textPlacement">
+            <h:commandButton value="Login" action="#{loginBean.validateUserLogin}" />
+        </div>
+    </h:form>
+</h:body>
+</HTML>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://java.sun.com/jsf/html">
+<h:head>
+    <title>JSF Authentication</title>
+    <style type="text/css">
+        .successText {
+            color: green;
+            margin: 12px;
+            font-weight: bold;
+        }
+    </style>
+</h:head>
+<h:body>
+
+
+    <div id="result">
+        Welcome, <span id="userName"><h:outputLabel class="successText" value="#{loginBean.userName}"/></span>
+    </div>
+<h:form id="logoutForm">
+    <p:commandLink type="submit"  value="Page 1" action="/page1.xhtml" style="text-decoration:none; color:crimson;"/>
+<br></br>
+    <p:commandLink type="submit"  value="Page 2" action="/page2.xhtml" style="text-decoration:none; color:crimson;"/>
+    <br></br>
+    <p:commandLink type="submit"  value="Page 3" action="/page3.xhtml" style="text-decoration:none; color:crimson;"/>
+    <br></br>
+
+<p:commandLink type="submit"  value="logout" action="#{loginBean.userLogout()}"/>
+</h:form>
+        </h:body>
+        </html>
